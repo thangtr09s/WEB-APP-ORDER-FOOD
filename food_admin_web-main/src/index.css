@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* defined font-face */
+@font-face {
+  font-family: roboto;
+  src: url("./assets/fonts/Roboto-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: roboto;
+  src: url("./assets/fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: roboto;
+  src: url("./assets/fonts/Roboto-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: roboto;
+  src: url("./assets/fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+}
+
+html {
+  font-family: roboto, sans-serif;
+}
+
+body {
+  @apply text-primary;
+}
+
+thead tr {
+  @apply border-b-[1px] border-[#434242];
+}
+
+thead tr th {
+  @apply relative text-[#5e5e60] text-base after:content-[''] after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:h-4 after:w-[2px] after:bg-[#e9e9eb] after:last:bg-transparent;
+}
+
+tbody tr {
+  @apply even:bg-[#f4f4f4] [&:first-of-type>td]:!py-0;
+}
+
+tbody tr td {
+  @apply first:text-neutral first:w-[4%] !py-4 [&:nth-of-type(2)]:font-medium [&:nth-of-type(n+3)]:text-[#908f92];
+}
+
+table {
+  @apply w-full;
+}
+
+td {
+  @apply whitespace-nowrap;
+}
+
+/* common styles */
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+.transition-base {
+  @apply transition-all duration-150 ease-linear;
+}
+
+.headline {
+  @apply mb-4 text-2xl;
+}
+
+/* sidebar styles */
+.sidebar {
+  @apply fixed top-0 left-0 bottom-0 z-50 w-260 bg-primary pt-3 transition-base pb-14 overflow-y-auto no-scrollbar;
+}
+
+/* --------------------------- react quill editor styles --------------------- */
+.ql-editor {
+  @apply min-h-[300px];
+}
+.quill {
+  @apply border-[1px] border-info rounded-md overflow-hidden;
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value]::before {
+  content: attr(data-value) !important;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value]::before {
+  content: attr(data-value) !important;
+}
+
+/* btn */
+.btn-base {
+  @apply px-4 text-sm text-white border-none  hover:opacity-80 transition-base;
+}
+
+.create-btn {
+  @apply btn btn-base btn-error hover:bg-error;
+}
+
+.update-btn {
+  @apply btn btn-base bg-[#35b2e8] hover:bg-[#35b2e8];
+}
+
+.delete-btn {
+  @apply btn btn-base btn-error;
+}
+
+/* scroll bar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

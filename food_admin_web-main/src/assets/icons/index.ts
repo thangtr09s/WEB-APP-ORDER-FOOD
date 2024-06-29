@@ -1,0 +1,13 @@
+export { default as AddIcon } from "./AddIcon";
+export { default as AlertIcon } from "./AlertIcon";
+export { default as ArrowRightIcon } from "./ArrowRightIcon";
+export { default as BanIcon } from "./BanIcon";
+export { default as BellIcon } from "./BellIcon";
+export { default as EditIcon } from "./EditIcon";
+export { default as EyeIcon } from "./EyeIcon";
+export { default as HomeIcon } from "./HomeIcon";
+export { default as MenuIcon } from "./MenuIcon";
+export { default as PersonIcon } from "./PersonIcon";
+export { default as SVGIconBase } from "./SVGIconBase";
+export { default as SaveIcon } from "./SaveIcon";
+export { default as TrashIcon } from "./TrashIcon";
